@@ -17,7 +17,7 @@ add_compile_definitions(PROJ_ROOT=\"${PROJECT_SOURCE_DIR}\")
 # will set CMAKE_C_FLAGS before this one. If you do not append in this case
 # this command would overwrite the CMAKE_C_FLAGS that you set in the toolchain
 # file.
-set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -O3 -std=c11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -O3 -std=c11")
 
 # Print out some debug info to ensure we have the right flags set depending
 # on the system processor we are building for.
