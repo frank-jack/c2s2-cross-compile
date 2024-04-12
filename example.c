@@ -5,7 +5,11 @@
 
 int main(int argc, char *argv[])
 {
-    const double inVal = stod(argv[1]);
+    if (argc < 2) // no arguments were passed
+    {
+        return 0;
+    }
+    const double inVal = strtod(argv[1]);
     double outVal = inVal;
     if (strcmp(argv[2], "root") == 0)
     {
