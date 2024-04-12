@@ -1,5 +1,7 @@
 // An example program that computes certain mathematical functions
 #include "ExampleMath.h"
+#include <string.h>
+#include <stdio.h>
 
 int main(int argc, char *argv[])
 {
@@ -21,7 +23,7 @@ int main(int argc, char *argv[])
     {
         outVal = inVal;
     }
-    printf("The %s of %d is %d", argv[2], inVal, outVal);
+    printf("The %s of %f is %f", argv[2], inVal, outVal);
 
     return 0;
 }

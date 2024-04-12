@@ -1,4 +1,5 @@
 #include "ExampleMath.h"
+#include <math.h>
 
 double root(double x)
 {
