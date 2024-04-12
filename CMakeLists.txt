@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 3.10)
 #set project name and version
 project(Example VERSION 1.0)
 
-# specify the C++ standard version
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# specify the C standard version
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED True)
 
 #start of cross-comp
 
@@ -38,7 +38,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_subdirectory(Math)
 
 #add executable
-add_executable(Example example.cxx)
+add_executable(Example example.c)
 
 #link library to executable
 target_link_libraries(Example PUBLIC Math )

@@ -1,2 +1,2 @@
 #add library
-add_library(Math ExampleMath.cxx)
+add_library(Math ExampleMath.c)
