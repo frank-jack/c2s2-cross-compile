@@ -8,6 +8,32 @@ project(Example VERSION 1.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+#start of cross-comp
+
+# Add the project root path as a compile time preprocessor definition
+add_compile_definitions(PROJ_ROOT=\"${PROJECT_SOURCE_DIR}\")
+
+# Set C flags. I append to whatever is previously set as the toolchain file
+# will set CMAKE_C_FLAGS before this one. If you do not append in this case
+# this command would overwrite the CMAKE_C_FLAGS that you set in the toolchain
+# file.
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O3 -std=c11")
+
+# Print out some debug info to ensure we have the right flags set depending
+# on the system processor we are building for.
+message("CMake detected system processor: ${CMAKE_SYSTEM_PROCESSOR}")
+if (CMAKE_SYSTEM_PROCESSOR STREQUAL riscv64)
+  message("Cross-compiling with RISCV-GNU GCC Toolchain!")
+  message("Cmake flags for riscv64: ${CMAKE_C_FLAGS}")
+endif()
+
+# Generates a compile_commands.json at the root of the build directory.
+# This file is used bu IDEs and code editors to provide features for
+# code completion, static analysis, and refactoring.
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+#end of cross-comp
+
 #add Math subdirectory
 add_subdirectory(Math)
 
