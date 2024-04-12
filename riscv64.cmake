@@ -28,4 +28,4 @@ set(CMAKE_OBJDUMP ${RISCV_TOOLCHAIN_BIN_PATH}/${CROSS_COMPILE}objdump CACHE FILE
 
 # Very important to include -static flag in order to run on Spike. It needs a
 # static binary.
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static" CACHE STRING "Spike needs static..." FORCE)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -static" CACHE STRING "Spike needs static..." FORCE)
