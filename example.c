@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     if (argc < 2) // no arguments were passed
     {
-        printf("We working?");
+        printf("We working?\n");
         return 0;
     }
     const double inVal = strtod(argv[1], NULL);
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     {
         outVal = inVal;
     }
-    printf("The %s of %f is %f", argv[2], inVal, outVal);
+    printf("The %s of %f is %f\n", argv[2], inVal, outVal);
 
     return 0;
 }
