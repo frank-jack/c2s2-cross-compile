@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 {
     if (argc < 2) // no arguments were passed
     {
+        printf("We working?");
         return 0;
     }
     const double inVal = strtod(argv[1], NULL);
