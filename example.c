@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     {
         return 0;
     }
-    const double inVal = strtod(argv[1]);
+    const double inVal = strtod(argv[1], NULL);
     double outVal = inVal;
     if (strcmp(argv[2], "root") == 0)
     {
